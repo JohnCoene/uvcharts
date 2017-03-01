@@ -28,13 +28,13 @@ uv_config <- function(p, ...){
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
-uv_dimensions <- function(p, width, height){
+uv_dimension <- function(p, width, height){
 
   opts <- list()
   opts$width <- if(!missing(width)) width
   opts$height <- if(!missing(height)) height
 
-  p$x$config$dimensions <- append(p$x$config$dimensions, opts)
+  p$x$config$dimension <- append(p$x$config$dimension, opts)
 
   p
 }
@@ -88,8 +88,8 @@ uv_frame <- function(p, bgcolor){
 #'
 #' @param p a \code{uvcharts} object.
 #' @param opacity opacity of the axis lines drawn for reference, defaults to \code{1}.
-#' @param ticks Number of major ticks on the measure axis.
-#' @param subticks Number of minor ticks on the measure axis.
+#' @param ticks number of major ticks on the measure axis.
+#' @param subticks number of minor ticks on the measure axis.
 #' @param padding any CSS size.
 #' @param minor length of the minor ticks towards the label.
 #' @param strokecolor color of axis lines, any Color Code or Color String or \code{none}. defaults to \code{#000000}.
@@ -292,7 +292,6 @@ uv_meta <- function(p, caption, subcaption, hlabel, vlabel, hsulabel, vsulabel, 
                           downloadLabel){
 
   opts <- list()
-  p$x$config$meta$caption <- if(!missing(caption)) caption
   opts$subcaption <- if(!missing(subcaption)) subcaption
   opts$hlabel <- if(!missing(hlabel)) hlabel
   opts$vlabel <- if(!missing(vlabel)) vlabel
@@ -300,6 +299,8 @@ uv_meta <- function(p, caption, subcaption, hlabel, vlabel, hsulabel, vsulabel, 
   opts$vsulabel <- if(!missing(vsulabel)) vsulabel
   opts$isDownloadable <- if(!missing(isDownloadable)) isDownloadable
   opts$downloadLabel <- if(!missing(downloadLabel)) downloadLabel
+
+  p$x$config$meta$caption <- if(!missing(caption)) caption
 
   p$x$config$meta <- append(p$x$config$meta, opts)
 

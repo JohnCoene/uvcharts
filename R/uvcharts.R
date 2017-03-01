@@ -115,10 +115,6 @@ uv_waterfall <- function(data, x, width = NULL, height = NULL, elementId = NULL)
   ucharts(data, x, "Waterfall", width = NULL, height = NULL, elementId = NULL)
 }
 
-uvcharts_html <- function(id, style, class, ...){
-  htmltools::tags$span(id = id, class = paste(class, "uv-div"))
-}
-
 #' Shiny bindings for uvcharts
 #'
 #' Output and render functions for using uvcharts within Shiny

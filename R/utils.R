@@ -1,4 +1,4 @@
-ucharts <- function(data, x, type = "Line", width = NULL, height = NULL, elementId = NULL) {
+ucharts <- function(data, x, type, width, height, elementId) {
 
   if(!is.data.frame(data)){
     stop("data must be a dataframe", call. = FALSE)
@@ -27,6 +27,8 @@ ucharts <- function(data, x, type = "Line", width = NULL, height = NULL, element
     x,
     width = width,
     height = height,
+    sizingPolicy = htmlwidgets::sizingPolicy(browser.fill = TRUE,
+                                             knitr.defaultWidth = '100%'),
     package = 'uvcharts',
     elementId = elementId
   )

@@ -12,9 +12,9 @@ uv_axis(p, opacity, ticks, subticks, padding, minor, strokecolor, fontfamily,
 
 \item{opacity}{opacity of the axis lines drawn for reference, defaults to \code{1}.}
 
-\item{ticks}{Number of major ticks on the measure axis.}
+\item{ticks}{number of major ticks on the measure axis.}
 
-\item{subticks}{Number of minor ticks on the measure axis.}
+\item{subticks}{number of minor ticks on the measure axis.}
 
 \item{padding}{any CSS size.}
 
