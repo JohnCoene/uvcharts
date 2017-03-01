@@ -4,12 +4,14 @@
 \alias{uv_legend}
 \title{Configure the chart}
 \usage{
-uv_legend(p, showlegends)
+uv_legend(p, showlegends, position)
 }
 \arguments{
 \item{p}{a \code{uvcharts} object.}
 
 \item{showlegends}{boolean.}
+
+\item{positon}{legend position, i.e.:\code{right}.}
 }
 \description{
 Configure the chart.

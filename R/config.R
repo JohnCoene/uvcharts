@@ -24,15 +24,16 @@ uv_config <- function(p, ...){
 #'
 #' @param p a \code{uvcharts} object.
 #' @param showlegends boolean.
-#'
+#' @param positon legend position, i.e.:\code{right}.
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
-uv_legend <- function(p, showlegends){
+uv_legend <- function(p, showlegends, position){
 
   opts <- list()
   opts$showlegends <- if(!missing(showlegends)) showlegends
+  opts$position <- if(!missing(position)) position
 
   p$x$config$legend <- append(p$x$config$legend, opts)
 
@@ -49,14 +50,13 @@ uv_legend <- function(p, showlegends){
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
-uv_dimension <- function(p, width, height){
+uv_dimension <- function(p, width, height = 200){
 
   opts <- list()
   opts$width <- if(!missing(width)) width
-  opts$height <- if(!missing(height)) height
+  opts$height <- height
 
   p$x$width <- if(!missing(width)) width
-  p$x$height <- if(!missing(height)) height
 
   p$x$config$dimension <- append(p$x$config$dimension, opts)
 
@@ -336,6 +336,7 @@ uv_meta <- function(p, caption, subcaption, hlabel, vlabel, hsulabel, vsulabel, 
 #' Customise the chart caption.
 #'
 #' @param p a \code{uvcharts} object.
+#' @param responsive \code{TRUE} for responsive sizing (default).
 #' @param palette palette name, see details for valid values. Defaults to \code{Brink}.
 #' @param bgcolor background color used for the entire chart include the margin spaces.
 #' @param orientation orientation of the chart for a different layout based on requirements. Can take
@@ -361,7 +362,7 @@ uv_meta <- function(p, caption, subcaption, hlabel, vlabel, hsulabel, vsulabel, 
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
-uv_graph <- function(p, palette, bgcolor, orientation, custom.palette, opacity){
+uv_graph <- function(p, palette, bgcolor, orientation, custom.palette, opacity, responsive = TRUE){
 
   opts <- list()
   opts$palette <- if(!missing(palette)) palette
@@ -369,6 +370,8 @@ uv_graph <- function(p, palette, bgcolor, orientation, custom.palette, opacity){
   opts$orientation <- if(!missing(orientation)) orientation
   opts$custompalette <- if(!missing(custom.palette)) custom.palette
   opts$opacity <- if(!missing(opacity)) opacity
+
+  p$x$config$graph$responsive <- responsive
 
   p$x$config$graph <- append(p$x$config$graph, opts)
 

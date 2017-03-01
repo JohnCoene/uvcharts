@@ -4,7 +4,8 @@
 \alias{uv_graph}
 \title{Customise chart caption}
 \usage{
-uv_graph(p, palette, bgcolor, orientation, custom.palette, opacity)
+uv_graph(p, palette, bgcolor, orientation, custom.palette, opacity,
+  responsive = TRUE)
 }
 \arguments{
 \item{p}{a \code{uvcharts} object.}
@@ -21,6 +22,8 @@ of color codes. They are used in order for corresponding category in the categor
 definition. Pass colors as \code{list}.}
 
 \item{opacity}{opacity of the entire chart to make it blend into any background of your choice. Defaults to \code{1}.}
+
+\item{responsive}{\code{TRUE} for responsive sizing (default).}
 }
 \description{
 Customise the chart caption.

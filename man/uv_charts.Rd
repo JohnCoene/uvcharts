@@ -16,32 +16,34 @@
 \alias{uv_waterfall}
 \title{Setup a uvchart}
 \usage{
-uv_charts(data, x, type = "Line", width = NULL, height = NULL,
+uv_charts(data, x, type = "Line", width = "100\%", height = "100\%",
   elementId = NULL)
 
-uv_bar(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_bar(data, x, width = "100\%", height = "100\%", elementId = NULL)
 
-uv_line(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_line(data, x, width = "100\%", height = "100\%", elementId = NULL)
 
-uv_area(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_area(data, x, width = "100\%", height = "100\%", elementId = NULL)
 
-uv_stackbar(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_stackbar(data, x, width = "100\%", height = "100\%", elementId = NULL)
 
-uv_stackarea(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_stackarea(data, x, width = "100\%", height = "100\%", elementId = NULL)
 
-uv_pie(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_pie(data, x, width = "100\%", height = "100\%", elementId = NULL)
 
-uv_donut(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_donut(data, x, width = "100\%", height = "100\%", elementId = NULL)
 
-uv_percentbar(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_percentbar(data, x, width = "100\%", height = "100\%",
+  elementId = NULL)
 
-uv_percentarea(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_percentarea(data, x, width = "100\%", height = "100\%",
+  elementId = NULL)
 
-uv_stepupbar(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_stepupbar(data, x, width = "100\%", height = "100\%", elementId = NULL)
 
-uv_polar(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_polar(data, x, width = "100\%", height = "100\%", elementId = NULL)
 
-uv_waterfall(data, x, width = NULL, height = NULL, elementId = NULL)
+uv_waterfall(data, x, width = "100\%", height = "100\%", elementId = NULL)
 }
 \arguments{
 \item{data}{data.frame of data to plot.}

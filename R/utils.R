@@ -15,6 +15,12 @@ ucharts <- function(data, x, type, width, height, elementId) {
     config = list(
       meta = list(
         caption = ""
+      ),
+      graph = list(
+        responsive = TRUE
+      ),
+      dimension = list(
+        height = 200
       )
     )
   )
@@ -27,7 +33,9 @@ ucharts <- function(data, x, type, width, height, elementId) {
     x,
     width = width,
     height = height,
-    sizingPolicy = htmlwidgets::sizingPolicy(browser.fill = TRUE,
+    sizingPolicy = htmlwidgets::sizingPolicy(browser.fill = FALSE,
+                                             viewer.defaultWidth = '100%',
+                                             viewer.defaultHeight = '100%',
                                              knitr.defaultWidth = '100%'),
     package = 'uvcharts',
     elementId = elementId
