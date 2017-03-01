@@ -1,7 +1,10 @@
 #' Add bars
 #'
+#' @param p a \code{uvcharts} object.
+#' @param serie values to plot.
+#'
 #' @export
-uv_serie <- function(p, serie){
+uv_add <- function(p, serie){
 
   # fetch from env
   data <- get("data", envir = data_env)

@@ -6,7 +6,15 @@
 \usage{
 uv_config(p, ...)
 }
+\arguments{
+\item{p}{a \code{uvcharts} object.}
+
+\item{...}{any argument to pass to \href{http://imaginea.github.io/uvCharts/documentation.html}{config}.}
+}
 \description{
-Configure the chart
+Configure the chart.
+}
+\seealso{
+\href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }
 
