@@ -55,11 +55,11 @@ uv_dimension <- function(p, width, height = 200, override = TRUE){
 
   opts <- list()
   opts$width <- if(!missing(width)) width
-  opts$height <- height
+  p$x$config$dimension$height <- height
 
   if(override == TRUE){
-    p$x$width <- if(!missing(width)) width
-    p$x$height <- if(!missing(height)) height
+    p$width <- if(!missing(width)) width
+    p$height <- if(!missing(height)) height
   }
 
   p$x$config$dimension <- append(p$x$config$dimension, opts)
