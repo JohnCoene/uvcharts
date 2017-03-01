@@ -18,6 +18,27 @@ uv_config <- function(p, ...){
   p
 }
 
+#' Configure the chart
+#'
+#' Configure the chart.
+#'
+#' @param p a \code{uvcharts} object.
+#' @param showlegends boolean.
+#'
+#'
+#' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
+#'
+#' @export
+uv_legend <- function(p, showlegends){
+
+  opts <- list()
+  opts$showlegends <- if(!missing(showlegends)) showlegends
+
+  p$x$config$legend <- append(p$x$config$legend, opts)
+
+  p
+}
+
 #' Customise chart dimensions
 #'
 #' Customise the chart dimensions.
@@ -33,6 +54,9 @@ uv_dimension <- function(p, width, height){
   opts <- list()
   opts$width <- if(!missing(width)) width
   opts$height <- if(!missing(height)) height
+
+  p$x$width <- if(!missing(width)) width
+  p$x$height <- if(!missing(height)) height
 
   p$x$config$dimension <- append(p$x$config$dimension, opts)
 
