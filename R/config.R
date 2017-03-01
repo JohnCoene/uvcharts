@@ -292,7 +292,7 @@ uv_meta <- function(p, caption, subcaption, hlabel, vlabel, hsulabel, vsulabel, 
                           downloadLabel){
 
   opts <- list()
-  opts$caption <- if(!missing(caption)) caption
+  p$x$config$meta$caption <- if(!missing(caption)) caption
   opts$subcaption <- if(!missing(subcaption)) subcaption
   opts$hlabel <- if(!missing(hlabel)) hlabel
   opts$vlabel <- if(!missing(vlabel)) vlabel
