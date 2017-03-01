@@ -4,12 +4,14 @@
 \alias{uv_dimension}
 \title{Customise chart dimensions}
 \usage{
-uv_dimension(p, width, height)
+uv_dimension(p, width, height = 200, override = TRUE)
 }
 \arguments{
 \item{p}{a \code{uvcharts} object.}
 
 \item{width, height}{any CSS size.}
+
+\item{override}{if \code{TRUE}, will override the div's height and width, recommend.}
 }
 \description{
 Customise the chart dimensions.

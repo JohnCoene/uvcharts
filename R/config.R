@@ -24,7 +24,7 @@ uv_config <- function(p, ...){
 #'
 #' @param p a \code{uvcharts} object.
 #' @param showlegends boolean.
-#' @param positon legend position, i.e.:\code{right}.
+#' @param position legend position, i.e.:\code{right}.
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
@@ -46,17 +46,21 @@ uv_legend <- function(p, showlegends, position){
 #'
 #' @param p a \code{uvcharts} object.
 #' @param width,height any CSS size.
+#' @param override if \code{TRUE}, will override the div's height and width, recommend.
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
-uv_dimension <- function(p, width, height = 200){
+uv_dimension <- function(p, width, height = 200, override = TRUE){
 
   opts <- list()
   opts$width <- if(!missing(width)) width
   opts$height <- height
 
-  p$x$width <- if(!missing(width)) width
+  if(override == TRUE){
+    p$x$width <- if(!missing(width)) width
+    p$x$height <- if(!missing(height)) height
+  }
 
   p$x$config$dimension <- append(p$x$config$dimension, opts)
 

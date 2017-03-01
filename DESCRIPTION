@@ -1,6 +1,6 @@
 Package: uvcharts
 Title: uvcharts htmlwidget
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: person("John", "Coene", email = "jcoeneo@gmail.com", role = c("aut", "cre"))
 Description: uvcharts htmlwidget for R.
 Depends:
