@@ -26,6 +26,13 @@ Valid values for \code{type} argument, defaults to \code{linear}:
   \item{\code{sqrt}}
 }
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_scale(type = "log")
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

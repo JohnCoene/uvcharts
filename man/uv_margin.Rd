@@ -14,6 +14,13 @@ uv_margin(p, top, bottom, left, right)
 \description{
 Customise the chart margin.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_margin(20, 20, 20, 20)
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

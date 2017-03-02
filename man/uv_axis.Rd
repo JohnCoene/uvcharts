@@ -37,6 +37,13 @@ uv_axis(p, opacity, ticks, subticks, padding, minor, strokecolor, fontfamily,
 \description{
 Customise the chart axis.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_axis(opacity = 0.6, ticks = 10, strokecolor = "blue", showtext = FALSE)
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

@@ -6,6 +6,11 @@ ucharts <- function(data, x, type, width, height, elementId) {
 
   x <- eval(substitute(x, parent.frame()), data)
 
+  if(is.numeric(x) || is.integer(x)){
+    data <- data[order(x),]
+    x <- x[order(x)]
+  }
+
   assign("data", data, envir = data_env)
   assign("x", x, envir = data_env)
 

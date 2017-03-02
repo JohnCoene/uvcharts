@@ -29,6 +29,13 @@ uv_meta(p, caption, subcaption, hlabel, vlabel, hsulabel, vsulabel,
 \description{
 Customise the chart meta properties.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_meta("Title", "Subtitle", "x axis", "y axis")
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

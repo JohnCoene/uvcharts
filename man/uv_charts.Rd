@@ -61,4 +61,30 @@ string and have \code{'px'} appended.}
 \description{
 Initiate a uvchart
 }
+\examples{
+mtcars \%>\%
+  uv_charts(mpg, type = "Area") \%>\%
+  uv_add(qsec)
+
+mtcars \%>\%
+  uv_bar(mpg) \%>\%
+  uv_add(qsec)
+
+mtcars \%>\%
+  uv_line(mpg) \%>\%
+  uv_add(qsec)
+
+mtcars \%>\%
+  uv_pie(mpg) \%>\%
+  uv_add(qsec)
+
+mtcars \%>\%
+  uv_stackbar(mpg) \%>\%
+  uv_add(qsec)
+
+mtcars \%>\%
+  uv_percentarea(mpg) \%>\%
+  uv_add(qsec)
+
+}
 

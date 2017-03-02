@@ -29,6 +29,13 @@ uv_label(p, fontfamily, fontsize, fontweight, strokecolor, showlabel, precision,
 \description{
 Customise the chart labels.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_label(fontsize = 6, strokecolor = "red")
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

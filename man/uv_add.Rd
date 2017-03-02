@@ -2,7 +2,7 @@
 % Please edit documentation in R/add.R
 \name{uv_add}
 \alias{uv_add}
-\title{Add bars}
+\title{Add serie}
 \usage{
 uv_add(p, serie)
 }
@@ -12,6 +12,13 @@ uv_add(p, serie)
 \item{serie}{values to plot.}
 }
 \description{
-Add bars
+Add serie
+}
+\examples{
+mtcars \%>\%
+  uv_bar(mpg) \%>\%
+  uv_add(qsec) \%>\%
+  uv_add(drat)
+
 }
 

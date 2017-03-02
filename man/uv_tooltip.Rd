@@ -16,6 +16,13 @@ uv_tooltip(p, show, format)
 \description{
 Customise the chart tooltip.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_tooltip(format = "\%v")
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

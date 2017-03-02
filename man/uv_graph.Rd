@@ -41,6 +41,13 @@ Valid values for \code{palette} argument.
   \item{\code{Lint}}
 }
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_graph(palette = "Plain")
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

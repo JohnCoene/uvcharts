@@ -31,6 +31,14 @@ Customise the chart caption.
 
 Customise the chart subcaption.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_meta("Title") \%>\%
+  uv_caption(fontsize = 30)
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

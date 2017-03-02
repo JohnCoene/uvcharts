@@ -16,6 +16,13 @@ uv_dimension(p, width, height = 200, override = TRUE)
 \description{
 Customise the chart dimensions.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_dimension(width = 200)
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

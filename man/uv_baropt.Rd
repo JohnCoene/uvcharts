@@ -22,6 +22,14 @@ uv_baropt(p, strokecolor, fontsize, fontweight, fontfamily, textcolor)
 \description{
 Customise the chart bars.
 }
+\examples{
+mtcars \%>\%
+  uv_stackbar(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_add(drat) \%>\%
+  uv_baropt(fontsize = 7)
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

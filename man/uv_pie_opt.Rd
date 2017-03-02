@@ -35,6 +35,13 @@ Customise the properties specific to Pie Chart.
 
 Customise the properties specific to Donut Chart.
 }
+\examples{
+mtcars \%>\%
+  uv_pie(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_pieopt(fontfill = "white")
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 

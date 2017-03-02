@@ -14,6 +14,13 @@ uv_config(p, ...)
 \description{
 Configure the chart.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_config(legend = list(showlegends = FALSE))
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

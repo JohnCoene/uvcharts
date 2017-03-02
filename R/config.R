@@ -5,6 +5,11 @@
 #' @param p a \code{uvcharts} object.
 #' @param ... any argument to pass to \href{http://imaginea.github.io/uvCharts/documentation.html}{config}.
 #'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_config(legend = list(showlegends = FALSE))
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
@@ -25,6 +30,12 @@ uv_config <- function(p, ...){
 #' @param p a \code{uvcharts} object.
 #' @param showlegends boolean.
 #' @param position legend position, i.e.:\code{right}.
+#'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_legend(position = "right")
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
@@ -47,6 +58,12 @@ uv_legend <- function(p, showlegends, position){
 #' @param p a \code{uvcharts} object.
 #' @param width,height any CSS size.
 #' @param override if \code{TRUE}, will override the div's height and width, recommend.
+#'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_dimension(width = 200)
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
@@ -76,6 +93,12 @@ uv_dimension <- function(p, width, height = 200, override = TRUE){
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_margin(20, 20, 20, 20)
+#'
 #' @export
 uv_margin <- function(p, top, bottom, left, right){
 
@@ -98,6 +121,12 @@ uv_margin <- function(p, top, bottom, left, right){
 #' @param bgcolor any Color Code or Color String or \code{none}.
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
+#'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_frame(bgcolor = "black")
 #'
 #' @export
 uv_frame <- function(p, bgcolor){
@@ -127,6 +156,12 @@ uv_frame <- function(p, bgcolor){
 #' @param showticks show ticks flag, \code{TRUE} or \code{FALSE}, defaults to the former.
 #' @param showsubticks show subticks flag, \code{TRUE} or \code{FALSE}, defaults to the former.
 #' @param showtext show text flag, \code{TRUE} or \code{FALSE}, defaults to the former.
+#'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_axis(opacity = 0.6, ticks = 10, strokecolor = "blue", showtext = FALSE)
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
@@ -167,6 +202,12 @@ uv_axis <- function(p, opacity, ticks, subticks, padding, minor, strokecolor, fo
 #' @param prefix any prefix which needs to be added to the label.
 #' @param suffix any suffix which needs to be added to the label.
 #'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_label(fontsize = 6, strokecolor = "red")
+#'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
@@ -206,6 +247,12 @@ uv_label <- function(p, fontfamily, fontsize, fontweight, strokecolor, showlabel
 #'   \item{\code{sqrt}}
 #' }
 #'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_scale(type = "log")
+#'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
@@ -227,6 +274,12 @@ uv_scale <- function(p, type, ordinality){
 #' @param p a \code{uvcharts} object.
 #' @param show flag to enable or disable tooltip functionality, defaults to \code{TRUE}.
 #' @param format defines custom format for tooltip, character string. defaults to \code{\%c [\%l] : \%v}
+#'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_tooltip(format = "%v")
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
@@ -257,6 +310,13 @@ uv_tooltip <- function(p, show, format){
 #' @rdname uv_caption
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
+#'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_meta("Title") %>%
+#'   uv_caption(fontsize = 30)
 #'
 #' @export
 uv_caption <- function(p, fontfamily, fontsize, fontweight, textdecoration, strokecolor,
@@ -313,6 +373,12 @@ uv_subcaption <- function(p, fontfamily, fontsize, fontweight, textdecoration, s
 #' @param isDownloadable whether or not to display the download link for the chart, defaults to \code{FALSE}.
 #' @param downloadLabel text to be displayed in the download link, defaults to \code{Download}.
 #'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_meta("Title", "Subtitle", "x axis", "y axis")
+#'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
@@ -363,6 +429,12 @@ uv_meta <- function(p, caption, subcaption, hlabel, vlabel, hsulabel, vsulabel, 
 #'   \item{\code{Lint}}
 #' }
 #'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_graph(palette = "Plain")
+#'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
@@ -393,6 +465,13 @@ uv_graph <- function(p, palette, bgcolor, orientation, custom.palette, opacity, 
 #' @param fontsize font size. Defaults to \code{11}.
 #' @param fontweight font weight, defaults to \code{bold}.
 #' @param textcolor text color used for the numbers, defaults to \code{#000000}.
+#'
+#' @examples
+#' mtcars %>%
+#'   uv_stackbar(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_add(drat) %>%
+#'   uv_baropt(fontsize = 7)
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
@@ -426,6 +505,12 @@ uv_baropt <- function(p, strokecolor, fontsize, fontweight, fontfamily, textcolo
 #'   \item{\code{cardinal}}
 #'   \item{\code{monotone}}
 #' }
+#'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_lineopt(interpolation = "cardinal")
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
@@ -466,10 +551,16 @@ uv_lineopt <- function(p, interpolation){
 #'   \item{\code{expand}}
 #' }
 #'
+#' @examples
+#' mtcars %>%
+#'   uv_area(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_areaopt(opacity = 0.9)
+#'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
-uv_areaeopt <- function(p, interpolation, opacity, offset){
+uv_areaopt <- function(p, interpolation, opacity, offset){
 
   opts <- list()
   opts$interpolation <- if(!missing(interpolation)) interpolation
@@ -496,6 +587,12 @@ uv_areaeopt <- function(p, interpolation, opacity, offset){
 #' @param factor radius of the cropped part in terms of the bigger pie. Defaults to \code{0.4}.
 #'
 #' @rdname uv_pie_opt
+#'
+#' @examples
+#' mtcars %>%
+#'   uv_pie(qsec) %>%
+#'   uv_add(mpg) %>%
+#'   uv_pieopt(fontfill = "white")
 #'
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'

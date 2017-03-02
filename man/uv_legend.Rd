@@ -16,6 +16,13 @@ uv_legend(p, showlegends, position)
 \description{
 Configure the chart.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_legend(position = "right")
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }

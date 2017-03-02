@@ -13,6 +13,31 @@
 #' @import htmlwidgets
 #' @rdname uv_charts
 #'
+#' @examples
+#' mtcars %>%
+#'   uv_charts(mpg, type = "Area") %>%
+#'   uv_add(qsec)
+#'
+#' mtcars %>%
+#'   uv_bar(mpg) %>%
+#'   uv_add(qsec)
+#'
+#' mtcars %>%
+#'   uv_line(mpg) %>%
+#'   uv_add(qsec)
+#'
+#' mtcars %>%
+#'   uv_pie(mpg) %>%
+#'   uv_add(qsec)
+#'
+#' mtcars %>%
+#'   uv_stackbar(mpg) %>%
+#'   uv_add(qsec)
+#'
+#' mtcars %>%
+#'   uv_percentarea(mpg) %>%
+#'   uv_add(qsec)
+#'
 #' @export
 uv_charts <- function(data, x, type = "Line", width = "100%", height = "100%", elementId = NULL) {
 

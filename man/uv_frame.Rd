@@ -14,6 +14,13 @@ uv_frame(p, bgcolor)
 \description{
 Customise the chart frame.
 }
+\examples{
+mtcars \%>\%
+  uv_charts(qsec) \%>\%
+  uv_add(mpg) \%>\%
+  uv_frame(bgcolor = "black")
+
+}
 \seealso{
 \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 }
