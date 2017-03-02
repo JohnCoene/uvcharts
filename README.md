@@ -14,4 +14,4 @@ You can install uvcharts from github with:
 devtools::install_github("uvcharts/JohnCoene")
 ```
 
-* [Docs & examples](#)
+* [Docs & examples](http://john-coene.com/htmlwidgets/uvcharts/index.html)
