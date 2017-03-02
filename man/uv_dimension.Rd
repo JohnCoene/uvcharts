@@ -11,7 +11,7 @@ uv_dimension(p, width, height = 200, override = TRUE)
 
 \item{width, height}{any CSS size.}
 
-\item{override}{if \code{TRUE}, will override the div's height and width, recommend.}
+\item{override}{if \code{TRUE}, overrides the div's height and width, recommended.}
 }
 \description{
 Customise the chart dimensions.

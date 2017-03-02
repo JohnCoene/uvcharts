@@ -20,7 +20,7 @@ uv_axis(p, opacity, ticks, subticks, padding, minor, strokecolor, fontfamily,
 
 \item{minor}{length of the minor ticks towards the label.}
 
-\item{strokecolor}{color of axis lines, any Color Code or Color String or \code{none}. defaults to \code{#000000}.}
+\item{strokecolor}{color of axis lines, any Color Code or Color String or \code{none}. Defaults to \code{#000000}.}
 
 \item{fontfamily}{any font, defaults to \code{Arial}.}
 

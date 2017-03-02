@@ -17,16 +17,15 @@ uv_graph(p, palette, bgcolor, orientation, custom.palette, opacity,
 \item{orientation}{orientation of the chart for a different layout based on requirements. Can take
 \code{Horizontal} or \code{Vertical}, defaults to the former.}
 
-\item{custom.palette}{override the palette with your own color palette by providing a non empty array
-of color codes. They are used in order for corresponding category in the categories array of the graph
-definition. Pass colors as \code{list}.}
+\item{custom.palette}{override the palette with your own color palette by providing a non empty list
+of color codes. They are used in order for corresponding series \code{uv_add}. Pass colors as \code{list}.}
 
 \item{opacity}{opacity of the entire chart to make it blend into any background of your choice. Defaults to \code{1}.}
 
 \item{responsive}{\code{TRUE} for responsive sizing (default).}
 }
 \description{
-Customise the chart caption.
+Customise the graph object.
 }
 \details{
 Valid values for \code{palette} argument.

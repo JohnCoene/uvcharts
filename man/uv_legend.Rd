@@ -11,10 +11,10 @@ uv_legend(p, showlegends, position)
 
 \item{showlegends}{boolean.}
 
-\item{position}{legend position, i.e.:\code{right}.}
+\item{position}{legend position, i.e.: \code{right}.}
 }
 \description{
-Configure the chart.
+Configure the legend.
 }
 \examples{
 mtcars \%>\%

@@ -25,11 +25,11 @@ uv_config <- function(p, ...){
 
 #' Configure the chart
 #'
-#' Configure the chart.
+#' Configure the legend.
 #'
 #' @param p a \code{uvcharts} object.
 #' @param showlegends boolean.
-#' @param position legend position, i.e.:\code{right}.
+#' @param position legend position, i.e.: \code{right}.
 #'
 #' @examples
 #' mtcars %>%
@@ -57,7 +57,7 @@ uv_legend <- function(p, showlegends, position){
 #'
 #' @param p a \code{uvcharts} object.
 #' @param width,height any CSS size.
-#' @param override if \code{TRUE}, will override the div's height and width, recommend.
+#' @param override if \code{TRUE}, overrides the div's height and width, recommended.
 #'
 #' @examples
 #' mtcars %>%
@@ -149,7 +149,7 @@ uv_frame <- function(p, bgcolor){
 #' @param subticks number of minor ticks on the measure axis.
 #' @param padding any CSS size.
 #' @param minor length of the minor ticks towards the label.
-#' @param strokecolor color of axis lines, any Color Code or Color String or \code{none}. defaults to \code{#000000}.
+#' @param strokecolor color of axis lines, any Color Code or Color String or \code{none}. Defaults to \code{#000000}.
 #' @param fontfamily any font, defaults to \code{Arial}.
 #' @param fontsize font size. Defaults to \code{11}.
 #' @param fontweight font weight, defaults to \code{bold}.
@@ -403,7 +403,7 @@ uv_meta <- function(p, caption, subcaption, hlabel, vlabel, hsulabel, vsulabel, 
 
 #' Customise chart caption
 #'
-#' Customise the chart caption.
+#' Customise the graph object.
 #'
 #' @param p a \code{uvcharts} object.
 #' @param responsive \code{TRUE} for responsive sizing (default).
@@ -411,9 +411,8 @@ uv_meta <- function(p, caption, subcaption, hlabel, vlabel, hsulabel, vsulabel, 
 #' @param bgcolor background color used for the entire chart include the margin spaces.
 #' @param orientation orientation of the chart for a different layout based on requirements. Can take
 #' \code{Horizontal} or \code{Vertical}, defaults to the former.
-#' @param custom.palette override the palette with your own color palette by providing a non empty array
-#' of color codes. They are used in order for corresponding category in the categories array of the graph
-#' definition. Pass colors as \code{list}.
+#' @param custom.palette override the palette with your own color palette by providing a non empty list
+#' of color codes. They are used in order for corresponding series \code{uv_add}. Pass colors as \code{list}.
 #' @param opacity opacity of the entire chart to make it blend into any background of your choice. Defaults to \code{1}.
 #'
 #' @details
@@ -492,7 +491,7 @@ uv_baropt <- function(p, strokecolor, fontsize, fontweight, fontfamily, textcolo
 
 #' Customise chart lines
 #'
-#' Customise the properties affecting Bar, Stacked Bar and Step Up Bar Chart.
+#' Customise the properties affecting Line Chart.
 #'
 #' @param p a \code{uvcharts} object.
 #' @param interpolation line interpolation. Defaults to \code{linear} see details for valid values.
@@ -527,7 +526,7 @@ uv_lineopt <- function(p, interpolation){
 
 #' Customise chart lines
 #'
-#' Customise the properties specific to line chart.
+#' Customise the properties specific to Area chart.
 #'
 #' @param p a \code{uvcharts} object.
 #' @param interpolation line interpolation. Defaults to \code{linear} see details for valid values.

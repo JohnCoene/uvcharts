@@ -16,7 +16,7 @@ uv_areaopt(p, interpolation, opacity, offset)
 \item{offset}{offset, defaults to \code{zero}. See details for valid values.}
 }
 \description{
-Customise the properties specific to line chart.
+Customise the properties specific to Area chart.
 }
 \details{
 Valid values for \code{interpolation} argument:

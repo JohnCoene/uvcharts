@@ -12,7 +12,7 @@ uv_lineopt(p, interpolation)
 \item{interpolation}{line interpolation. Defaults to \code{linear} see details for valid values.}
 }
 \description{
-Customise the properties affecting Bar, Stacked Bar and Step Up Bar Chart.
+Customise the properties affecting Line Chart.
 }
 \details{
 Valid values for \code{interpolation} argument:

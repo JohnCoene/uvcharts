@@ -51,6 +51,7 @@ prep_dataset <- function(x, values){
   dataset <- cbind.data.frame(as.character(x), values)
   names(dataset) <- c("name", "value")
   rownames(dataset) <- NULL
+  dataset[is.na(dataset[,"value"])] <- 0
   dataset <- apply(dataset, 1, function(row) as.list(row[!is.na(row)]))
 
   # values as numeric
