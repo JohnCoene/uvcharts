@@ -11,6 +11,7 @@
 #' @param elementId id of div element containing chart.
 #'
 #' @import htmlwidgets
+#' @importFrom stats complete.cases
 #' @rdname uv_charts
 #'
 #' @examples

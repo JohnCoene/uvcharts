@@ -9,6 +9,7 @@ ucharts <- function(data, x, type, width, height, elementId) {
   if(is.numeric(x) || is.integer(x)){
     data <- data[order(x),]
     x <- x[order(x)]
+    data <- as.data.frame(data)
   }
 
   assign("data", data, envir = data_env)
@@ -50,6 +51,10 @@ ucharts <- function(data, x, type, width, height, elementId) {
 prep_dataset <- function(x, values){
   dataset <- cbind.data.frame(as.character(x), values)
   names(dataset) <- c("name", "value")
+  if(length(dataset[is.na(dataset)])){
+    warning("uvcharts does not handle missing values. Removing NAs.", call. = FALSE)
+    dataset[complete.cases(dataset),]
+  }
   rownames(dataset) <- NULL
   dataset <- apply(dataset, 1, function(row) as.list(row[!is.na(row)]))
 
