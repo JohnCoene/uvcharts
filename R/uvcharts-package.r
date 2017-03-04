@@ -5,5 +5,6 @@
 #' @name uvcharts
 #' @docType package
 #'
+#' @importFrom methods is
 #' @keywords internal
 NULL
