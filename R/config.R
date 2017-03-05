@@ -57,7 +57,7 @@ uv_legend <- function(p, showlegends, position){
 #'
 #' @param p a \code{uvcharts} object.
 #' @param width,height any CSS size.
-#' @param override if \code{TRUE}, overrides the div's height and width, recommended.
+#' @param override if \code{TRUE}, overrides the htmlwidgets div's height and width.
 #'
 #' @examples
 #' mtcars %>%
@@ -68,7 +68,7 @@ uv_legend <- function(p, showlegends, position){
 #' @seealso \href{http://imaginea.github.io/uvCharts/documentation.html}{Official docs}
 #'
 #' @export
-uv_dimension <- function(p, width, height = 200, override = TRUE){
+uv_dimension <- function(p, width, height = 200, override = FALSE){
 
   opts <- list()
   opts$width <- if(!missing(width)) width
