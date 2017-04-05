@@ -1,9 +1,9 @@
+[![Travis-CI Build Status](https://travis-ci.org/JohnCoene/uvcharts.svg?branch=master)](https://travis-ci.org/JohnCoene/uvcharts)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/JohnCoene/uvcharts?branch=master&svg=true)](https://ci.appveyor.com/project/JohnCoene/uvcharts)
+
 # uvcharts
 
 ![uvcharts](http://john-coene.com/img/thumbnails/uvcharts.png)
-
-[![Travis-CI Build Status](https://travis-ci.org/JohnCoene/uvcharts.svg?branch=master)](https://travis-ci.org/JohnCoene/uvcharts)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/JohnCoene/uvcharts?branch=master&svg=true)](https://ci.appveyor.com/project/JohnCoene/uvcharts)
 
 `uvcharts` is an htmlwidget for R of the [uvcharts](http://imaginea.github.io/uvCharts) charting library.
 
